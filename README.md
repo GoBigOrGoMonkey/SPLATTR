@@ -3,7 +3,7 @@
 Plain HTML, CSS and JavaScript — no build step, no dependencies. This is the
 current SPLATTR! design (forest hero, three feature columns, dev updates,
 Discord link, mobile menu) ported from the React/TanStack version so it
-deploys on Vercel without a build.
+deploys on Vercel without a build
 
 ## Files
 - `index.html` — the page (all copy lives here)
