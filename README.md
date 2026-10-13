@@ -1,3 +1,0 @@
-# SPLATTR WEBSITE
-
-hi
