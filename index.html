@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SPLATTR! — VR Paintball, Reimagined</title>
   <meta name="description" content="Explore the forest, find your own route, and play paintball in VR. SPLATTR is an independent game currently in development.">
-  <meta property="og:title" content="SPLATTR! — VR Paintball, Reimagined">
-  <meta property="og:description" content="A new perspective on paintball. Explore SPLATTR, an independent VR game in development.">
+  <!-- Link preview (Discord, Twitter, iMessage...): title on top, subtext underneath -->
+  <meta property="og:title" content="SPLATTR!">
+  <meta property="og:description" content="A new perspective to paintball">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SPLATTR!">
+  <meta name="twitter:description" content="A new perspective to paintball">
+  <!-- Optional: to show the screenshot in the preview too, put your real domain in place of YOUR-SITE
+       and remove the comment markers around the two lines below. It must be a full https:// address. -->
+  <!--
+  <meta property="og:image" content="https://YOUR-SITE.vercel.app/Assets/PaintballPreview1.png">
+  <meta name="twitter:image" content="https://YOUR-SITE.vercel.app/Assets/PaintballPreview1.png">
+  -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +31,10 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="#game">The game</a>
         <a href="#features">Features</a>
+        <a href="#maps">Maps</a>
         <a href="#updates">Updates</a>
+        <a href="#developers">Developers</a>
+        <a href="#faq">FAQ</a>
         <a class="mobile-community" href="#community">Community</a>
       </nav>
       <a class="btn game-button game-button-outline header-community" href="#community">Join the community
@@ -36,7 +48,7 @@
 
     <main>
       <section class="game-hero" aria-labelledby="hero-title">
-        <img src="Assets/forest-arena.jpg" class="hero-image" alt="PaintballPreview1.png" width="1920" height="1088" fetchpriority="high">
+        <img src="Assets/PaintballPreview1.png" class="hero-image" alt="Two gorillas in a bare autumn forest, one in a pink knit hat and one in a blue sun hat" width="1080" height="1080" fetchpriority="high">
         <div class="hero-shade"></div>
         <div class="hero-inner page-width">
           <div class="hero-copy">
@@ -100,6 +112,77 @@
         </div>
       </section>
 
+      <section class="stats-strip" aria-label="SPLATTR at a glance">
+        <div class="page-width stats-grid">
+          <div class="stat reveal"><strong>3</strong><span>Lives to stay alive</span></div>
+          <div class="stat reveal"><strong>2</strong><span>Maps in development</span></div>
+          <div class="stat reveal"><strong>VR</strong><span>Paintball, reimagined</span></div>
+          <div class="stat reveal"><strong>Indie</strong><span>Independent game</span></div>
+        </div>
+      </section>
+
+      <section id="how" class="how-section">
+        <div class="page-width">
+          <div class="section-label"><span class="mini-dash"></span> HOW IT PLAYS</div>
+          <div class="section-title-row"><h2>Four things to know.</h2><span class="quiet-text">Move · Route · Shoot · Survive</span></div>
+          <ol class="steps">
+            <li class="step reveal">
+              <div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg><span>01</span></div>
+              <h3>Move with your hands</h3>
+              <p>SPLATTR! is built around a hand based movement system. Your hands are how you get around.</p>
+            </li>
+            <li class="step reveal">
+              <div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><span>02</span></div>
+              <h3>Make your route</h3>
+              <p>Find your own way through the map and make routes to escape other players.</p>
+            </li>
+            <li class="step reveal">
+              <div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg><span>03</span></div>
+              <h3>Aim and shoot</h3>
+              <p>Line up other players and let the paint fly.</p>
+            </li>
+            <li class="step reveal">
+              <div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>04</span></div>
+              <h3>Stay alive</h3>
+              <p>You have three lives. Dodge shots and make them count.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="maps" class="maps-section page-width">
+        <div class="section-label"><span class="mini-dash"></span> THE MAPS</div>
+        <div class="section-title-row"><h2>Pick your battlefield.</h2><span class="quiet-text">More maps in development</span></div>
+        <div class="maps-grid">
+          <article class="map-card reveal">
+            <div class="map-media">
+              <img src="Assets/PaintballPreview1.png" alt="Gorillas in the SPLATTR forest map" width="1080" height="1080" loading="lazy">
+            </div>
+            <div class="map-body">
+              <span class="map-status">IN DEVELOPMENT</span>
+              <h3>Forest</h3>
+              <p>Explore the forest and find your own route.</p>
+            </div>
+          </article>
+          <article class="map-card reveal">
+            <!-- When you have a subway screenshot, swap this div for: <div class="map-media"><img src="Assets/subway.png" alt="..."></div> -->
+            <div class="map-media map-media-subway" role="img" aria-label="Subway map, screenshot coming soon"><span>Screenshot coming soon</span></div>
+            <div class="map-body">
+              <span class="map-status">IN DEVELOPMENT</span>
+              <h3>Subway</h3>
+              <p>A second arena, currently being built.</p>
+            </div>
+          </article>
+          <article class="map-card map-card-more reveal">
+            <div class="map-body">
+              <span class="map-plus" aria-hidden="true">+</span>
+              <h3>More maps</h3>
+              <p>Many more are on the way.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="updates" class="updates-section">
         <div class="page-width">
           <div class="section-label"><span class="mini-dash"></span> FROM DEVELOPMENT</div>
@@ -113,6 +196,102 @@
             </div>
             <svg class="update-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
           </article>
+        </div>
+      </section>
+
+      <section id="roadmap" class="roadmap-section page-width">
+        <div class="section-label"><span class="mini-dash"></span> ROADMAP</div>
+        <div class="section-title-row"><h2>Where SPLATTR! is headed.</h2><span class="quiet-text">Subject to change</span></div>
+        <ol class="roadmap">
+          <li class="road-item is-now reveal">
+            <span class="road-when">NOW</span>
+            <div><h3>Forest and subway maps</h3><p>Both maps are in development right now.</p></div>
+            <span class="road-state">In development</span>
+          </li>
+          <li class="road-item reveal">
+            <span class="road-when">NEXT</span>
+            <div><h3>More maps</h3><p>New places to explore, with new routes to find.</p></div>
+            <span class="road-state">Planned</span>
+          </li>
+          <li class="road-item reveal">
+            <span class="road-when">LATER</span>
+            <div><h3>Release</h3><p>No date yet. Follow the Discord and the updates above for news.</p></div>
+            <span class="road-state">TBA</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="developers" class="dev-section">
+        <div class="page-width dev-inner">
+          <div class="dev-intro">
+            <div class="section-label"><span class="mini-dash"></span> DEVELOPERS</div>
+            <h2>Meet the developer.</h2>
+            <p>SPLATTR! is an independent game. Here's who is behind it and where to find them.</p>
+          </div>
+          <div class="dev-cards">
+            <!--
+              ============ EDIT YOUR DEVELOPER CARD HERE ============
+              1. Name ........ change "SPLATTR Dev" below (and the letter inside .dev-initial)
+              2. Profile pic . replace the file Assets/dev-pfp.png with your own picture
+                               (same file name, square image works best). If the picture ever
+                               fails to load, the card falls back to the big letter.
+              3. Your OWN Discord server (not the game's): paste the invite link into
+                 href="" on the green button below. Leave it empty and the button stays hidden.
+              To add another developer, copy the whole <article class="dev-card"> ... </article> block.
+            -->
+            <article class="dev-card reveal">
+              <div class="dev-avatar">
+                <span class="dev-initial" aria-hidden="true">S</span>
+                <img src="Assets/dev-pfp.png" alt="Profile picture of SPLATTR Dev" width="400" height="400" loading="lazy" onerror="this.remove()">
+              </div>
+              <div class="dev-info">
+                <span class="dev-role">DEVELOPER · SPLATTR!</span>
+                <h3>SPLATTR Dev</h3>
+                <p>Building SPLATTR! one map at a time.</p>
+                <div class="dev-links">
+                  <a class="btn game-button game-button-primary dev-server-link" href="" target="_blank" rel="noopener noreferrer" hidden>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    Join my Discord server
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </a>
+                  <a class="dev-game-link" href="#community">Looking for the game's Discord?</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section page-width">
+        <div class="section-label"><span class="mini-dash"></span> FAQ</div>
+        <div class="faq-layout">
+          <h2>Questions, answered.</h2>
+          <div class="faq-list">
+            <details class="faq-item reveal" name="faq" open>
+              <summary>What is SPLATTR!?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>SPLATTR! is a VR paintball game built around hand based movement. It is an independent game that is currently in development.</p>
+            </details>
+            <details class="faq-item reveal" name="faq">
+              <summary>Is it out yet?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>Not yet. Right now there is a forest map and a subway map, with many more on the way. Follow the Discord for news.</p>
+            </details>
+            <details class="faq-item reveal" name="faq">
+              <summary>How do I move around?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>With your hands. The movement system is hand based, so you make your own routes through each map.</p>
+            </details>
+            <details class="faq-item reveal" name="faq">
+              <summary>How many lives do I get?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>Three. Dodge shots, stay alive, and make every life count.</p>
+            </details>
+            <details class="faq-item reveal" name="faq">
+              <summary>Where can I follow development?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>Join the community Discord in the Community section below, and check the Updates section on this page.</p>
+            </details>
+            <details class="faq-item reveal" name="faq">
+              <summary>Who makes SPLATTR!?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p>It is made independently. You can find the developer in the Developers section above.</p>
+            </details>
+          </div>
         </div>
       </section>
 

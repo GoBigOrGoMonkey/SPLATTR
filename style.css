@@ -192,3 +192,172 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
 .mobile-menu .icon-close { display: none; }
 .mobile-menu[aria-expanded="true"] .icon-open { display: none; }
 .mobile-menu[aria-expanded="true"] .icon-close { display: block; }
+
+
+/* =====================================================================
+   Additions — new sections (stats, how it plays, maps, roadmap,
+   developers, FAQ), scroll reveal, active nav link, paint splats.
+   Nothing above this line was changed for these.
+   ===================================================================== */
+
+/* ---- Nav: active link + tighter spacing now that there are more links ---- */
+.site-nav a.is-active { color: var(--foreground); }
+@media (min-width: 961px) and (max-width: 1180px) { .site-nav { gap: 24px; margin-right: 22px; } }
+
+/* Tablet: use the hamburger menu between 641px and 960px so six links never overflow */
+@media (min-width: 641px) and (max-width: 960px) {
+  .mobile-menu { display: inline-flex; }
+  .mobile-community { display: block; }
+  .header-community { margin-left: auto; }
+  .site-nav { display: none; position: absolute; top: 88px; left: 0; right: 0; margin: 0; padding: 22px 32px; background: var(--background); border-bottom: 1px solid var(--border); }
+  .site-nav.is-open { display: flex; flex-direction: column; align-items: start; gap: 24px; }
+}
+
+/* ---- Scroll reveal (only active when script.js adds .js to <html>) ---- */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease, border-color .2s, background-color .2s; }
+.js .reveal.in-view { opacity: 1; transform: none; }
+.js .reveal:nth-child(2) { transition-delay: .07s; }
+.js .reveal:nth-child(3) { transition-delay: .14s; }
+.js .reveal:nth-child(4) { transition-delay: .21s; }
+
+/* ---- Shared bits ---- */
+.how-section, .dev-section { padding-block: 63px 68px; }
+.maps-section, .roadmap-section, .faq-section { padding-block: 66px 70px; }
+
+/* ---- Stats strip ---- */
+.stats-strip { border-block: 1px solid var(--border); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 34px 28px; border-right: 1px solid var(--border); }
+.stat:first-child { padding-left: 0; }
+.stat:last-child { border-right: 0; padding-right: 0; }
+.stat strong { display: block; font-family: var(--font-display); font-size: 40px; font-weight: 700; line-height: 1.1; color: var(--primary); }
+.stat span { display: block; margin-top: 9px; font-size: 10px; color: var(--muted-foreground); }
+
+/* ---- How it plays ---- */
+.how-section { background: var(--card); border-bottom: 1px solid var(--border); }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 44px; border-top: 1px solid var(--border); }
+.step { padding: 28px 26px 0; border-right: 1px solid var(--border); }
+.step:first-child { padding-left: 0; }
+.step:last-child { padding-right: 0; border-right: 0; }
+.step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.step-top svg { width: 22px; height: 22px; color: var(--primary); stroke-width: 1.3; }
+.step-top span { font-size: 10px; color: var(--muted-foreground); }
+.step h3 { font-size: 16px; font-weight: 500; margin: 0 0 10px; }
+.step p { font-size: 12px; line-height: 1.85; color: var(--muted-foreground); }
+
+/* ---- Maps ---- */
+.maps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+.map-card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.map-card:hover { border-color: var(--muted-foreground); }
+.map-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--secondary); }
+.map-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; transition: transform .5s ease; }
+.map-card:hover .map-media img { transform: scale(1.04); }
+.map-media-subway {
+  display: flex; align-items: flex-end; padding: 14px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in oklch, var(--foreground) 5%, transparent) 46px 48px),
+    linear-gradient(180deg, var(--secondary), var(--background));
+}
+.map-media-subway::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 34%; height: 30px;
+  border-block: 2px solid color-mix(in oklch, var(--primary) 55%, transparent);
+  background: repeating-linear-gradient(90deg, transparent 0 14px, color-mix(in oklch, var(--primary) 20%, transparent) 14px 18px);
+}
+.map-media-subway span { position: relative; font-size: 9px; font-weight: 600; color: var(--muted-foreground); }
+.map-body { padding: 22px 24px 26px; }
+.map-status { display: flex; align-items: center; gap: 8px; font-size: 8px; font-weight: 600; color: var(--primary); }
+.map-status::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--primary); }
+.map-body h3 { font-size: 19px; font-weight: 500; margin: 12px 0 8px; }
+.map-body p { font-size: 12px; line-height: 1.85; color: var(--muted-foreground); }
+.map-card-more { background: transparent; border-style: dashed; justify-content: center; align-items: center; text-align: center; min-height: 240px; }
+.map-card-more .map-body h3 { margin-top: 6px; }
+.map-plus { display: block; font-family: var(--font-display); font-size: 44px; line-height: 1; color: var(--primary); }
+
+/* ---- Roadmap ---- */
+.roadmap { margin-top: 38px; border-top: 1px solid var(--border); }
+.road-item { display: grid; grid-template-columns: 110px 1fr auto; gap: 30px; align-items: center; padding: 26px 0; border-bottom: 1px solid var(--border); }
+.road-when { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--muted-foreground); }
+.road-when::before { content: ""; width: 7px; height: 7px; border-radius: 50%; border: 1px solid currentColor; }
+.road-item.is-now .road-when { color: var(--primary); }
+.road-item.is-now .road-when::before { background: var(--primary); border-color: var(--primary); }
+.road-item h3 { font-size: 16px; font-weight: 500; margin: 0 0 6px; }
+.road-item p { font-size: 12px; line-height: 1.85; color: var(--muted-foreground); max-width: 560px; }
+.road-state { font-size: 9px; padding: 6px 11px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted-foreground); white-space: nowrap; }
+.road-item.is-now .road-state { color: var(--primary); border-color: color-mix(in oklch, var(--primary) 45%, transparent); }
+
+/* ---- Developers ---- */
+.dev-section { background: var(--card); border-block: 1px solid var(--border); }
+.dev-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+.dev-intro h2 { font-size: 29px; font-weight: 500; margin: 23px 0 0; }
+.dev-intro p { max-width: 360px; margin-top: 14px; font-size: 12px; line-height: 1.9; color: var(--muted-foreground); }
+.dev-cards { display: grid; gap: 18px; }
+.dev-card { display: flex; align-items: center; gap: 28px; padding: 28px; background: var(--background); border: 1px solid var(--border); border-radius: 8px; }
+.dev-avatar { position: relative; flex: 0 0 104px; width: 104px; height: 104px; border-radius: 50%; overflow: hidden; background: var(--accent); box-shadow: 0 0 0 3px var(--background), 0 0 0 5px var(--primary); }
+.dev-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.dev-initial { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--primary); }
+.dev-role { font-size: 9px; font-weight: 600; color: var(--primary); }
+.dev-info h3 { font-size: 22px; font-weight: 600; margin: 8px 0 6px; }
+.dev-info p { font-size: 12px; line-height: 1.8; color: var(--muted-foreground); }
+.dev-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 18px; }
+.dev-links .game-button { height: 42px; gap: 12px; }
+.dev-game-link { font-size: 10px; color: var(--muted-foreground); padding-bottom: 2px; border-bottom: 1px solid var(--border); transition: color .2s, border-color .2s; }
+.dev-game-link:hover { color: var(--foreground); border-color: var(--muted-foreground); }
+
+/* ---- FAQ ---- */
+.faq-layout { display: grid; grid-template-columns: 1fr 1.7fr; gap: 80px; margin-top: 23px; align-items: start; }
+.faq-layout h2 { font-size: 29px; font-weight: 500; }
+.faq-list { border-top: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; font-family: var(--font-display); font-size: 15px; font-weight: 500; cursor: pointer; list-style: none; transition: color .2s; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--primary); }
+.faq-item summary:focus-visible { outline: 1px solid var(--ring); outline-offset: 4px; }
+.faq-item summary svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--primary); transition: transform .25s; }
+.faq-item[open] summary svg { transform: rotate(45deg); }
+.faq-item p { padding: 0 40px 24px 0; font-size: 12px; line-height: 1.9; color: var(--muted-foreground); }
+
+/* ---- Paint splat on click (below the hero only) ---- */
+.splat { position: fixed; width: 120px; height: 120px; margin: -60px 0 0 -60px; pointer-events: none; z-index: 50; animation: splat 1.2s ease-out forwards; }
+@keyframes splat {
+  0%   { transform: scale(.25); opacity: .95; }
+  14%  { transform: scale(1);   opacity: .95; }
+  100% { transform: scale(1.06); opacity: 0; }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .how-section, .dev-section { padding-block: 50px 54px; }
+  .maps-section, .roadmap-section, .faq-section { padding-block: 52px 56px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat, .stat:first-child, .stat:last-child { padding: 28px 24px; border-right: 1px solid var(--border); }
+  .stat:nth-child(odd) { padding-left: 0; }
+  .stat:nth-child(even) { border-right: 0; padding-right: 0; }
+  .stat:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .step, .step:first-child, .step:last-child { padding: 28px 24px 30px; border-right: 1px solid var(--border); }
+  .step:nth-child(odd) { padding-left: 0; }
+  .step:nth-child(even) { border-right: 0; padding-right: 0; }
+  .step:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .maps-grid { grid-template-columns: 1fr 1fr; }
+  .map-card-more { grid-column: 1 / -1; min-height: 150px; }
+  .dev-inner { grid-template-columns: 1fr; gap: 34px; }
+  .faq-layout { grid-template-columns: 1fr; gap: 28px; }
+  .road-item { grid-template-columns: 90px 1fr auto; gap: 22px; }
+}
+@media (max-width: 640px) {
+  .how-section, .dev-section { padding-block: 42px 46px; }
+  .maps-section, .roadmap-section, .faq-section { padding-block: 44px 48px; }
+  .stat strong { font-size: 32px; }
+  .steps { grid-template-columns: 1fr; margin-top: 32px; }
+  .step, .step:first-child, .step:last-child, .step:nth-child(odd), .step:nth-child(even) { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: 0; padding-bottom: 0; }
+  .maps-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+  .map-card-more { min-height: 130px; }
+  .roadmap { margin-top: 28px; }
+  .road-item { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
+  .road-state { justify-self: start; }
+  .dev-intro h2, .faq-layout h2 { font-size: 25px; }
+  .dev-card { flex-direction: column; align-items: flex-start; gap: 22px; padding: 24px; }
+  .faq-item summary { font-size: 14px; padding: 19px 0; }
+  .faq-item p { padding-right: 0; }
+}
