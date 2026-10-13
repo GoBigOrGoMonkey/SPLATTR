@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPLATTR! — VR Paintball, Reimagined</title>
+  <meta name="description" content="Explore the forest, find your own route, and play paintball in VR. SPLATTR is an independent game currently in development.">
+  <meta property="og:title" content="SPLATTR! — VR Paintball, Reimagined">
+  <meta property="og:description" content="A new perspective on paintball. Explore SPLATTR, an independent VR game in development.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="splattr-site" id="home">
+    <header class="site-header">
+      <a href="#home" class="wordmark" aria-label="SPLATTR home">splattr<span>!</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#game">The game</a>
+        <a href="#features">Features</a>
+        <a href="#updates">Updates</a>
+        <a class="mobile-community" href="#community">Community</a>
+      </nav>
+      <a class="btn game-button game-button-outline header-community" href="#community">Join the community
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <button type="button" class="btn btn-ghost btn-icon mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="game-hero" aria-labelledby="hero-title">
+        <img src="assets/forest-arena.jpg" class="hero-image" alt="PaintballPreview1.png" width="1920" height="1088" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="hero-inner page-width">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="status-dot"></span>&nbsp;VR PAINTBALL GAME</div>
+            <h1 id="hero-title">SPLATTR<span>!</span></h1>
+            <h2>A vr paintball game.</h2>
+            <p>Check out the various maps!<br class="desktop-break">And play around with a hand based movement system!<br></p>
+            <div class="hero-actions">
+              <a class="btn game-button game-button-primary" href="#game">About the game
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+              <a class="btn game-button game-button-outline" href="#updates">Development updates
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="hero-status"><span class="status-dot"></span> Currently in development</div>
+          </div>
+          <div class="hero-bottom">
+            <span>NEW TAKE ON PAINTBALL</span>
+            <a href="#game" aria-label="Scroll to the game">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="game" class="game-section page-width">
+        <div class="section-label"><span class="mini-dash"></span>ABOUT THE GAME</div>
+        <div class="game-intro">
+          <h2>Not just vr.<br><span>A whole new way to play.</span></h2>
+          <p>SPLATTR! is a vr paintball game built around hand based movement, With many different maps in development currently</p>
+        </div>
+        <div id="features" class="feature-grid">
+          <article class="feature-item">
+            <div class="feature-top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5h6v6"/><path d="M19 5 5 19"/></svg>
+              <span>01</span>
+            </div>
+            <h3>Make routes</h3>
+            <p>Make routes to escape players.</p>
+            <span class="feature-category">MOVEMENT</span>
+          </article>
+          <article class="feature-item">
+            <div class="feature-top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>
+              <span>02</span>
+            </div>
+            <h3>Shoot some players</h3>
+            <p>Aim at players and shoot</p>
+            <span class="feature-category">PAINTBALL</span>
+          </article>
+          <article class="feature-item">
+            <div class="feature-top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <span>03</span>
+            </div>
+            <h3>Stay alive</h3>
+            <p>You have three lives stay alive and dodge shots</p>
+            <span class="feature-category">THREE LIVES</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="updates" class="updates-section">
+        <div class="page-width">
+          <div class="section-label"><span class="mini-dash"></span> FROM DEVELOPMENT</div>
+          <div class="section-title-row"><h2>A work in progress.</h2><span class="quiet-text">SPLATTR news</span></div>
+          <article class="update-row">
+            <div class="update-index">1<span>DEV NOTE</span></div>
+            <div class="update-copy">
+              <span class="update-badge">In development</span>
+              <h3>Splattr update.</h3>
+              <p>Project in development currently have a subway and forest map,<br>and many more on the way.</p>
+            </div>
+            <svg class="update-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </article>
+        </div>
+      </section>
+
+      <section id="community" class="community-section page-width">
+        <div>
+          <div class="section-label"><span class="mini-dash"></span> COMMUNITY</div>
+          <h2>SEE YOU THERE</h2>
+          <p>Follow SPLATTR'S development</p>
+        </div>
+        <div class="community-links">
+          <a class="btn game-button game-button-outline" href="https://discord.com/invite/GWUMh2GyPn" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            Join the Discord
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+          <span class="quiet-text">Community Discord.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width">
+      <a href="#home" class="wordmark" aria-label="SPLATTR home">SPLATTR<span>!</span></a>
+      <span>© 2026 SPLATTR.</span>
+      <a href="#home" class="back-top">Top
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
