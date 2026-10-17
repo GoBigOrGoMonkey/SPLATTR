@@ -316,13 +316,6 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
 .faq-item[open] summary svg { transform: rotate(45deg); }
 .faq-item p { padding: 0 40px 24px 0; font-size: 12px; line-height: 1.9; color: var(--muted-foreground); }
 
-/* ---- Paint splat on click (below the hero only) ---- */
-.splat { position: fixed; width: 120px; height: 120px; margin: -60px 0 0 -60px; pointer-events: none; z-index: 50; animation: splat 1.2s ease-out forwards; }
-@keyframes splat {
-  0%   { transform: scale(.25); opacity: .95; }
-  14%  { transform: scale(1);   opacity: .95; }
-  100% { transform: scale(1.06); opacity: 0; }
-}
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
