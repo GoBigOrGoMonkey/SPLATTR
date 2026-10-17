@@ -79,39 +79,6 @@
   });
 })();
 
-// Paint splat wherever you click on the page (not on the hero, header, or links/buttons).
-(function () {
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var NS = "http://www.w3.org/2000/svg";
-  var COLORS = ["#d9ff3f", "#ff4fa3", "#3d7bff", "#ff7a45"]; // site lime + the pink / blue / orange from the game
-  var live = [];
-
-  function rand(min, max) { return min + Math.random() * (max - min); }
-  function el(name, attrs) {
-    var node = document.createElementNS(NS, name);
-    for (var k in attrs) node.setAttribute(k, attrs[k]);
-    return node;
-  }
-
-  function makeSplat(x, y) {
-    var color = COLORS[Math.floor(Math.random() * COLORS.length)];
-    var svg = el("svg", { viewBox: "-60 -60 120 120", "aria-hidden": "true", class: "splat" });
-    svg.style.left = x + "px";
-    svg.style.top = y + "px";
-    svg.style.rotate = Math.round(rand(0, 360)) + "deg"; // separate property, so it doesn't fight the scale animation
-    var g = el("g", { fill: color, stroke: color, "stroke-linecap": "round" });
-    g.appendChild(el("circle", { cx: 0, cy: 0, r: rand(13, 19) }));
-    var drops = Math.round(rand(8, 12));
-    for (var i = 0; i < drops; i++) {
-      var a = rand(0, Math.PI * 2), d = rand(20, 44);
-      g.appendChild(el("circle", { cx: Math.cos(a) * d, cy: Math.sin(a) * d, r: rand(2, 6.5) }));
-      if (i % 3 === 0) {
-        g.appendChild(el("line", { x1: 0, y1: 0, x2: Math.cos(a) * d * 0.9, y2: Math.sin(a) * d * 0.9, "stroke-width": rand(3, 7) }));
-      }
-    }
-    svg.appendChild(g);
-    return svg;
-  }
 
   document.addEventListener("click", function (e) {
     if (e.target.closest && e.target.closest("a, button, summary, input, textarea, select, .game-hero, .site-header")) return;
