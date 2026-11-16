@@ -354,3 +354,36 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
   .faq-item summary { font-size: 14px; padding: 19px 0; }
   .faq-item p { padding-right: 0; }
 }
+
+/* Visual refinement */
+:root{--background:#101611;--foreground:#f3f4ed;--card:#171f18;--primary:#c7f36a;--primary-foreground:#17200e;--secondary:#202a21;--muted-foreground:#a4ad9d;--accent:#29362a;--border:#344034;--hero-shadow:#0b110d}
+.page-width{width:min(1180px,calc(100% - 96px))}
+.site-header{height:78px;background:rgba(16,22,17,.96);border-bottom-color:#29352a}
+.site-nav{gap:27px}.site-nav a{font-size:12px}
+.game-hero{min-height:650px;height:min(720px,calc(100svh - 78px));background:#121b14}
+.hero-shade{background:linear-gradient(90deg,rgba(7,13,9,.94),rgba(7,13,9,.76) 38%,rgba(7,13,9,.12) 78%),linear-gradient(0deg,rgba(7,13,9,.7),transparent 36%)}
+.hero-copy{max-width:670px;padding-top:clamp(70px,10vh,112px)}
+.hero-copy h1{font-size:clamp(76px,9vw,116px);letter-spacing:-.075em;line-height:.98}
+.hero-copy h2{font-size:clamp(26px,3vw,36px);font-weight:650;letter-spacing:-.045em}
+.hero-copy p{max-width:510px;font-size:15px;line-height:1.9}
+.section-label{font-size:10px;letter-spacing:.17em;font-weight:800;color:var(--primary)}
+.game-section,.how-section,.dev-section,.maps-section,.roadmap-section,.faq-section{padding-block:82px}
+.game-intro .game-lead{font:600 clamp(24px,3.4vw,39px)/1.35 var(--font-display);letter-spacing:-.045em;color:var(--foreground);max-width:860px}
+.feature-grid{gap:16px;margin-top:55px}
+.feature-item,.feature-item:first-child,.feature-item:last-child{border:1px solid var(--border);border-radius:10px;background:linear-gradient(145deg,#1b251c,#141b15);padding:27px 28px;min-height:220px;transition:transform .2s,border-color .2s}
+.feature-item:hover{transform:translateY(-4px);border-color:#758b55;background:#1d2a1e}
+.feature-top svg{color:var(--primary)}.feature-item h3{font-size:21px;font-weight:700;letter-spacing:-.04em}
+.feature-item p,.step p,.map-body p,.road-item p,.faq-item p{font-size:13px;line-height:1.85}
+.stats-strip,.how-section,.dev-section{background:#151d16;border-color:var(--border)}
+.stat strong{font-size:43px;letter-spacing:-.06em}.stat span{font-size:11px}
+.section-title-row h2,.community-section h2{font-size:clamp(28px,3.8vw,42px);font-weight:700;letter-spacing:-.055em}
+.step h3,.road-item h3{font-size:18px;font-weight:700}
+.maps-grid{gap:18px}.map-card{border-radius:10px;background:#171f18;border-color:var(--border)}
+.map-media{aspect-ratio:16/9}.map-body{padding:24px}.map-body h3{font-size:22px;font-weight:700}
+.updates-section{background:#171f18;border-block:1px solid var(--border);padding-block:78px}
+.update-copy h3{font-size:22px;font-weight:700}.dev-card{border-radius:10px;border-color:var(--border);padding:30px}
+.faq-item summary{font-size:16px;font-weight:650}
+.site-footer{min-height:110px;flex-wrap:wrap;gap:20px}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px}.footer-links a{color:var(--muted-foreground);font-size:10px}.footer-links a:hover{color:var(--primary)}
+@media(max-width:900px){.page-width{width:calc(100% - 56px)}.site-header{padding-inline:28px}}
+@media(max-width:640px){.page-width{width:calc(100% - 36px)}.site-header{padding-inline:18px}.game-hero{height:650px;min-height:0}.hero-copy{padding-top:70px}.hero-copy h1{font-size:68px}.game-section,.how-section,.dev-section,.maps-section,.roadmap-section,.faq-section{padding-block:52px}.feature-item,.feature-item:first-child,.feature-item:last-child{min-height:0;padding:24px;border:1px solid var(--border);border-radius:9px}.feature-grid{gap:12px}.footer-links{order:4;width:100%;gap:14px}}
